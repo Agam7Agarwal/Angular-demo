@@ -1,0 +1,102 @@
+[
+  {
+    "name": "agam",
+    "password": "agamagam",
+    "todolist":[
+                  {
+                    "task": "learn Angular",
+                    "duedate": "22/04/2016",
+                    "description": "Angular tutorials from W3Schools",
+                    "status": "pending"
+                  },
+                  {
+                    "task": "learn React",
+                    "duedate": "05/05/2017",
+                    "description": "React tutorials from W3Schools",
+                    "status": "pending"
+                  },
+                  {
+                    "task": "learn Bootstrap",
+                    "duedate": "05/03/2016",
+                    "description": "Bootstrap tutorials from W3Schools",
+                    "status": "complete"
+                  }
+               ]
+  },
+  {
+    "name": "divyansh",
+    "password": "1234",
+    "todolist": [
+      {
+        "task": "learn Java",
+        "duedate": "20/08/2016",
+        "description": "Java tutorials from W3Schools",
+        "status": "complete"
+      },
+      {
+        "task": "learn JavaScript",
+        "duedate": "20/08/2015",
+        "description": "JavaScript tutorials from W3Schools",
+        "status": "complete"
+      },
+      {
+        "task": "learn Angular2",
+        "duedate": "20/08/2018",
+        "description": "Java tutorials from W3Schools",
+        "status": "pending"
+      },
+      {
+        "task": "learn SAAS",
+        "duedate": "20/08/2016",
+        "description": "SAAS Documentation",
+        "status": "complete"
+      }
+    ]
+  },
+  {
+    "name": "akash",
+    "password": "akash123",
+    "todolist": [
+                    {
+                      "task": "learn Java8",
+                      "duedate": "20/02/2018",
+                      "description": "Java8 tutorials from W3Schools",
+                      "status": "pending"
+                    },
+                    {
+                      "task": "learn JSON",
+                      "duedate": "26/08/2015",
+                      "description": "JSON tutorials from W3Schools",
+                      "status": "pending"
+                    },
+                    {
+                      "task": "learn Ajax",
+                      "duedate": "20/03/2015",
+                      "description": "Ajax tutorials from W3Schools",
+                      "status": "complete"
+                    },
+                    {
+                      "task": "Make Project",
+                      "duedate": "26/09/2016",
+                      "description": "Designing the Structure",
+                      "status": "pending"
+                    }
+             ]
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
