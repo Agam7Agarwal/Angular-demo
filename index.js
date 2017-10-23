@@ -3,6 +3,7 @@ import homecontroller from './controllers/home.controller'
 import logincontroller from './controllers/login.controller'
 import registercontroller from './controllers/register.controller'
 import addtask from './controllers/addtask.controller'
+import headercontroller from './controllers/header.controller'
 import fetchdata from './services/fetchdata'
 
 let app = angular.module('angular_demo', ['ui.router']);
@@ -36,14 +37,16 @@ app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
         })
 
 });
+
 app.factory('fetchdata', fetchdata);
 
 app.component('headerMain', {
     templateUrl: './components/Header.html',
+    controller: headercontroller,
+    controllerAs: 'header',
     bindings: {
         description: '@'
     },
-    controllerAs: 'header'
 })
     .component('footerCustom' , {
         template: '<footer>' +
