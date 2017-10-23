@@ -7,13 +7,15 @@ import headercontroller from './controllers/header.controller'
 import fetchdata from './services/fetchdata'
 
 let app = angular.module('angular_demo', ['ui.router']);
-app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
+app.config(function ($locationProvider, $stateProvider, $urlRouterProvider , $urlMatcherFactoryProvider) {
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
     });
 
     $urlRouterProvider.when('/', 'home');
+
+    $urlMatcherFactoryProvider.caseInsensitive(true);
 
     $stateProvider.state('home', {
         url: '/home',
