@@ -14,10 +14,7 @@ function logincontroller($state, fetchdata, $localStorage) {
         vm.loggedin_user = vm.userlist.find(findname);
         fetchdata.setuser(vm.loggedin_user);
 
-        if (vm.userlist.find(findname)) {
-            /*var index = vm.userlist.findIndex(user => user.name === vm.username);
-             vm.loggedinusername ="ghhggh";
-             vm.loggedin_user_tasks = vm.userlist[index].todolist;*/
+        if (vm.userlist.find(findname) && vm.username && vm.password) {
             $state.go('displaytodo')
         }
         else {

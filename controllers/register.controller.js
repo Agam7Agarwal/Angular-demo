@@ -7,6 +7,8 @@ function registercontroller($state, fetchdata, $localStorage) {
 
 
     vm.register_details = () => {
+
+        if( vm.username && vm.password && vm.task && vm.duedate && vm.description){
         function findname(useritem) {
             return ((useritem.name === vm.username) && (useritem.password === vm.password));
         }
@@ -32,6 +34,10 @@ function registercontroller($state, fetchdata, $localStorage) {
             vm.userlist.push(newuser);
             window.localStorage.setItem('userlist', JSON.stringify(vm.userlist));
             $state.go('login');
+        }
+        }
+        else{
+            vm.errormsg = "Please Enter The Details First.";
         }
     }
 }

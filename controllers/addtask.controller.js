@@ -9,7 +9,7 @@ function addtask($state, fetchdata, $localStorage) {
     };
 
     vm.logout = () => {
-        $state.go('home');
+        $state.go('login');
     };
 
     vm.gotoaddtask = () => {
@@ -17,17 +17,23 @@ function addtask($state, fetchdata, $localStorage) {
     };
 
     vm.addtask = () => {
-        vm.newtask = {
-            "task": vm.task,
-            "duedate": vm.duedate,
-            "description": vm.description,
-            "status": "pending"
-        };
-        let addedlist = {...vm.loggedin_user, todolist: [...userList[vm.loggedin_user.id].todolist, vm.newtask]};
-        userList[vm.loggedin_user.id] = addedlist;
-        window.localStorage.setItem('userlist', JSON.stringify(userList));
 
-        $state.go('displaytodo');
+        if(vm.task && vm.duedate && vm.description) {
+            vm.newtask = {
+                "task": vm.task,
+                "duedate": vm.duedate,
+                "description": vm.description,
+                "status": "pending"
+            };
+            let addedlist = {...vm.loggedin_user, todolist: [...userList[vm.loggedin_user.id].todolist, vm.newtask]};
+            userList[vm.loggedin_user.id] = addedlist;
+            window.localStorage.setItem('userlist', JSON.stringify(userList));
+
+            $state.go('displaytodo');
+        }
+        else{
+            vm.errormsg = "Please Fill The Details First."
+        }
     }
 }
 
