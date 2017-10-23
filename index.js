@@ -6,8 +6,8 @@ import addtask from './controllers/addtask.controller'
 import headercontroller from './controllers/header.controller'
 import fetchdata from './services/fetchdata'
 
-let app = angular.module('angular_demo', ['ui.router']);
-app.config(function ($locationProvider, $stateProvider, $urlRouterProvider , $urlMatcherFactoryProvider) {
+let app = angular.module('angular_demo', ['ui.router', 'ngStorage']);
+app.config(function ($locationProvider, $stateProvider, $urlRouterProvider, $urlMatcherFactoryProvider) {
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
@@ -50,7 +50,7 @@ app.component('headerMain', {
         description: '@'
     },
 })
-    .component('footerCustom' , {
+    .component('footerCustom', {
         template: '<footer>' +
         '<ng-transclude class="d-flex justify-content-center"></ng-transclude>' +
         '</footer>',
@@ -73,7 +73,7 @@ app.component('headerMain', {
     })
     .component('displayTodo', {
         templateUrl: './components/Display.html',
-        controller: logincontroller,
+        controller: addtask,
         controllerAs: 'vm'
     })
     .component('addTask', {

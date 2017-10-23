@@ -1,9 +1,10 @@
 <div class="d-flex flex-column">
     <header-main description="TODO LIST"></header-main>
+
     <!-- Main Body Starts -->
     <section>
-        <h3>{{vm.loggedin_user.name}}'s Tasks </h3>
-        <table class="table table-striped" >
+        <h3>{{vm.displaylist.name}}'s Tasks </h3>
+        <table class="table table-striped">
             <tr>
                 <th>Task</th>
                 <th>Due Date</th>
@@ -11,7 +12,7 @@
                 <th>Status</th>
             </tr>
 
-            <tr ng-repeat = "obj  in vm.loggedin_user.todolist track by $index">
+            <tr ng-repeat="obj  in vm.displaylist.todolist track by $index">
                 <td>{{ obj.task }}</td>
                 <td>{{ obj.duedate }}</td>
                 <td>{{ obj.description }}</td>

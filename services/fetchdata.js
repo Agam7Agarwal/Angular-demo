@@ -1,10 +1,10 @@
-function fetchdata ($http) {
-     let userloggedin = {user:''};
+function fetchdata($http) {
+    let userloggedin = {user: ''};
 
-   const getData =  () => {
-       return $http.get('./api/data.json').then(function (response) {
-             let list = response.data;
-             return list;
+    const getData = () => {
+        return $http.get('./api/data.json').then(function (response) {
+            let list = response.data;
+            return list;
         });
     };
 
@@ -16,7 +16,7 @@ function fetchdata ($http) {
         return userloggedin.user;
     };
 
-    return {getData , setuser , get};
+    return {getData, setuser, get};
 
 }
 

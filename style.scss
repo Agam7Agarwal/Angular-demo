@@ -9,12 +9,12 @@ html, body {
   font-size: 17px;
 }
 
-.custom-container{
+.custom-container {
   margin: 0 auto;
   width: 90%;
 }
 
-.header-main{
+.header-main {
   padding-bottom: 10px;
   padding-top: 15px;
   border-bottom: 2px solid $grey-medium;
@@ -23,22 +23,31 @@ html, body {
     font-size: 37px;
     font-weight: 600;
   }
-  h4{
+
+  h4 {
     font-size: 26px;
     margin-bottom: 5px;
     font-weight: 600;
+
+    @media screen and (max-width: 768px) {
+      & {
+        font-size: 15px;
+      }
+    }
   }
-  .logo-img{
+
+  .logo-img {
     cursor: pointer;
   }
 }
-.btn-custom{
+
+.btn-custom {
   background-color: $heading-text-color;
   border: none;
   padding: 15px;
   font-size: 19px;
   cursor: pointer;
-  color:$grey-light;
+  color: $grey-light;
   border-radius: 5px;
 
   @media screen and (max-width: 768px) {
@@ -52,15 +61,15 @@ html, body {
     background-color: $heading-text-color;
     border: none;
   }
-  &:focus{
+  &:focus {
     box-shadow: none;
   }
-  &:disabled{
+  &:disabled {
     cursor: default;
   }
 }
 
-section{
+section {
   padding: 15px;
 
   @media screen and (min-width: 768px) {
@@ -69,19 +78,19 @@ section{
     }
   }
 
-  h3{
+  h3 {
     text-align: center;
     color: #61C3A5;
     text-transform: uppercase;
   }
 
-  .banner-img{
+  .banner-img {
     width: 100%;
     border-radius: 20px;
     height: 100%;
   }
 
-  .error{
+  .error {
     font-size: 20px;
     color: red;
     font-weight: 600;
@@ -93,7 +102,7 @@ section{
     }
   }
 
-  .table{
+  .table {
     @media screen and (max-width: 768px) {
       & {
         font-size: 2.2vw;
@@ -102,11 +111,11 @@ section{
   }
 }
 
-footer{
+footer {
   padding: 20px 0;
   border-top: 2px solid $grey-medium;
 
-  .btn-center{
+  .btn-center {
     text-align: -webkit-center;
   }
 }

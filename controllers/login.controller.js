@@ -1,15 +1,8 @@
-function logincontroller($state , fetchdata) {
+function logincontroller($state, fetchdata, $localStorage) {
     let vm = this;
 
     vm.$onInit = () => {
-        vm.getData = fetchdata.getData().then(function (response) {
-
-            return response;
-
-        }).then((response) => {
-            vm.userlist = response;
-        })
-
+        vm.userlist = JSON.parse(window.localStorage.getItem("userlist"));
     };
 
     vm.getlogindetails = () => {
@@ -21,25 +14,17 @@ function logincontroller($state , fetchdata) {
         vm.loggedin_user = vm.userlist.find(findname);
         fetchdata.setuser(vm.loggedin_user);
 
-        if(vm.userlist.find(findname)){
+        if (vm.userlist.find(findname)) {
             /*var index = vm.userlist.findIndex(user => user.name === vm.username);
-            vm.loggedinusername ="ghhggh";
-            vm.loggedin_user_tasks = vm.userlist[index].todolist;*/
+             vm.loggedinusername ="ghhggh";
+             vm.loggedin_user_tasks = vm.userlist[index].todolist;*/
             $state.go('displaytodo')
         }
-        else{
+        else {
             vm.login_error = "Please Try Again With Correct Details";
             vm.username = '';
             vm.password = '';
         }
-    };
-
-    vm.logout = () => {
-        $state.go('home');
-    };
-
-    vm.gotoaddtask = () => {
-        $state.go('addtask');
     };
 
     vm.loggedin_user = fetchdata.get();
