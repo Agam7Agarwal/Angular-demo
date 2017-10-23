@@ -1,4 +1,5 @@
 @import './colors';
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300,400,600');
 
 html, body {
   width: 100%;
@@ -20,11 +21,10 @@ html, body {
   h1 {
     color: $heading-text-color;
     font-size: 37px;
-    margin-bottom: 5px;
     font-weight: 600;
   }
   h4{
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 5px;
     font-weight: 600;
   }
@@ -48,7 +48,6 @@ html, body {
   &:disabled{
     cursor: default;
   }
-
 }
 
 section{

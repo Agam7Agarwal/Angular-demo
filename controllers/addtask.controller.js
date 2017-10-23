@@ -13,8 +13,8 @@ function addtask($state, fetchdata) {
             "description": vm.description,
             "status": "pending"
         };
-        let addedlist = { todolist: [ ... vm.newtask] };
-        console.log(addedlist , "addedlist")
+        let addedlist = { ...vm.loggedin_user , todolist: [ ...vm.loggedin_user.todolist , vm.newtask] };
+        console.log(addedlist , "addedlist");
     }
 }
 

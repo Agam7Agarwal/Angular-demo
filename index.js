@@ -5,7 +5,7 @@ import registercontroller from './controllers/register.controller'
 import addtask from './controllers/addtask.controller'
 import fetchdata from './services/fetchdata'
 
-let app = angular.module('angular_demo' , ['ui.router']);
+let app = angular.module('angular_demo', ['ui.router']);
 app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
     $locationProvider.html5Mode({
         enabled: true,
@@ -26,17 +26,17 @@ app.config(function ($locationProvider, $stateProvider, $urlRouterProvider) {
             url: '/register',
             template: '<register> </register>'
         })
-        .state('displaytodo' , {
+        .state('displaytodo', {
             url: 'displaytodo',
             template: '<display-todo></display-todo>'
         })
-        .state('addtask' , {
+        .state('addtask', {
             url: 'addtask',
             template: '<add-task></add-task>'
         })
 
 });
-app.factory('fetchdata' , fetchdata);
+app.factory('fetchdata', fetchdata);
 
 app.component('headerMain', {
     templateUrl: './components/Header.html',
@@ -45,6 +45,12 @@ app.component('headerMain', {
     },
     controllerAs: 'header'
 })
+    .component('footerCustom' , {
+        template: '<footer>' +
+        '<ng-transclude class="d-flex justify-content-center"></ng-transclude>' +
+        '</footer>',
+        transclude: true
+    })
     .component('home', {
         templateUrl: './components/Home.html',
         controller: homecontroller,
